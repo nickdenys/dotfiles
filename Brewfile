@@ -1,6 +1,4 @@
 # Taps
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 tap 'stripe/stripe-cli'
 
 # Binaries
@@ -34,9 +32,9 @@ brew 'yarn'
 
 # Apps
 cask '1password'
-brew '1password-cli'
 cask 'discord'
 cask 'docker'
+cask 'docker-desktop'
 cask 'figma'
 cask 'firefox'
 cask 'github'
@@ -48,10 +46,12 @@ cask 'tableplus'
 cask 'transmit'
 cask 'visual-studio-code'
 cask 'zoom'
+cask 'rectangle'
+cask 'vanilla'
+cask 'rocket'
 
 # Quicklook
 cask 'qlmarkdown'
-cask 'quicklook-json'
 
 # Fonts
 cask 'font-lato'
@@ -59,8 +59,8 @@ cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+cask 'font-source-sans-3'
+cask 'font-source-serif-4'
 cask 'font-cascadia-code'
 cask 'font-ibm-plex-mono'
 
