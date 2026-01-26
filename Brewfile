@@ -49,6 +49,7 @@ cask 'zoom'
 cask 'rectangle'
 cask 'vanilla'
 cask 'rocket'
+cask 'tower'
 
 # Quicklook
 cask 'qlmarkdown'
