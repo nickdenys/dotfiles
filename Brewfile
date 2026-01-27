@@ -50,6 +50,7 @@ cask 'rectangle'
 cask 'vanilla'
 cask 'rocket'
 cask 'tower'
+cask 'dbngin'
 
 # Quicklook
 cask 'qlmarkdown'
