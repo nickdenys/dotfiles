@@ -30,6 +30,10 @@ ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
 rm -rf $HOME/.gitconfig
 ln -sw $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 
+mkdir -p $HOME/.config/ghostty
+rm -rf $HOME/.config/ghostty/config
+ln -sw $HOME/.dotfiles/ghostty.conf $HOME/.config/ghostty/config
+
 # Update Homebrew recipes
 brew update
 
