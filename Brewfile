@@ -1,4 +1,5 @@
 # Taps
+tap 'peonping/tap'
 tap 'stripe/stripe-cli'
 
 # Binaries
@@ -26,6 +27,7 @@ brew 'optipng'
 brew 'pngquant'
 brew 'svgo'
 brew 'trash'
+brew 'peon-ping'
 brew 'zsh-autosuggestions'
 
 # Development Apps

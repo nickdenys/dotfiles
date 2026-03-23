@@ -42,6 +42,8 @@ ln -sf $HOME/.dotfiles/claude/statusline.sh $HOME/.claude/statusline.sh
 ln -sf $HOME/.dotfiles/claude/laravel-php-guidelines.md $HOME/.claude/laravel-php-guidelines.md
 ln -sf $HOME/.dotfiles/claude/agents $HOME/.claude/agents
 ln -sf $HOME/.dotfiles/claude/skills $HOME/.claude/skills
+mkdir -p $HOME/.claude/hooks/peon-ping
+ln -sf $HOME/.dotfiles/claude/peon-ping-config.json $HOME/.claude/hooks/peon-ping/config.json
 
 # Update Homebrew recipes
 brew update
