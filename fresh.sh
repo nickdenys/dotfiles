@@ -34,6 +34,15 @@ mkdir -p $HOME/.config/ghostty
 rm -rf $HOME/.config/ghostty/config
 ln -sw $HOME/.dotfiles/ghostty.conf $HOME/.config/ghostty/config
 
+# Symlink Claude Code config
+mkdir -p $HOME/.claude
+ln -sf $HOME/.dotfiles/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
+ln -sf $HOME/.dotfiles/claude/settings.json $HOME/.claude/settings.json
+ln -sf $HOME/.dotfiles/claude/statusline.sh $HOME/.claude/statusline.sh
+ln -sf $HOME/.dotfiles/claude/laravel-php-guidelines.md $HOME/.claude/laravel-php-guidelines.md
+ln -sf $HOME/.dotfiles/claude/agents $HOME/.claude/agents
+ln -sf $HOME/.dotfiles/claude/skills $HOME/.claude/skills
+
 # Update Homebrew recipes
 brew update
 
