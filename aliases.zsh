@@ -1,4 +1,6 @@
 # Shortcuts
+alias ls="eza"
+alias ll="eza -la"
 alias c="clear"
 alias reloadshell="omz reload"
 alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'

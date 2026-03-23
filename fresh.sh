@@ -23,23 +23,25 @@ if test ! $(which brew); then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+# Symlink dotfiles to home directory
 rm -rf $HOME/.zshrc
 ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+rm -rf $HOME/.gitconfig
+ln -sw $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 
 # Update Homebrew recipes
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
 brew bundle --file ./Brewfile
 
 # Set default MySQL root password and auth type
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
 
 # Create a projects directories
-mkdir $HOME/Code
-mkdir $HOME/Herd
+mkdir -p $HOME/Code
+mkdir -p $HOME/Herd
 
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg
