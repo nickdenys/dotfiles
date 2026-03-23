@@ -4,9 +4,13 @@ export DOTFILES=$HOME/.dotfiles
 # Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-ZSH_CUSTOM=$DOTFILES # Use dotfiles repo for custom plugins/themes
+ZSH_CUSTOM=$DOTFILES/oh-my-zsh-custom
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
+
+# Shell config
+source $DOTFILES/home/aliases.zsh
+source $DOTFILES/home/path.zsh
 
 # Locale
 export LC_ALL=en_US.UTF-8

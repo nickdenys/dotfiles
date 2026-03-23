@@ -44,7 +44,7 @@ After backing up your old Mac you may now follow these install instructions to s
 4. Run the installation with:
 
     ```zsh
-    cd ~/.dotfiles && ./fresh.sh
+    cd ~/.dotfiles && ./bin/install
     ```
 
 5. Start `Herd.app` and run its install process
@@ -53,7 +53,7 @@ After backing up your old Mac you may now follow these install instructions to s
 
 Your Mac is now ready to use!
 
-> 💡 You can use a different location than `~/.dotfiles` if you want. Make sure you also update the references in the [`.zshrc`](./.zshrc#L2) and [`fresh.sh`](./fresh.sh#L20) files.
+> You can use a different location than `~/.dotfiles` if you want. Make sure you also update the references in the [`home/.zshrc`](./home/.zshrc#L2) and [`bin/install`](./bin/install#L26) files.
 
 ### Cleaning your old Mac (optionally)
 

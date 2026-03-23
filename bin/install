@@ -23,33 +23,34 @@ if test ! $(which brew); then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Symlink dotfiles to home directory
+# Symlink shell config to home directory
 rm -rf $HOME/.zshrc
-ln -sw $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sw $HOME/.dotfiles/home/.zshrc $HOME/.zshrc
 
 rm -rf $HOME/.gitconfig
-ln -sw $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
+ln -sw $HOME/.dotfiles/home/.gitconfig $HOME/.gitconfig
 
+# Symlink app config
 mkdir -p $HOME/.config/ghostty
 rm -rf $HOME/.config/ghostty/config
-ln -sw $HOME/.dotfiles/ghostty.conf $HOME/.config/ghostty/config
+ln -sw $HOME/.dotfiles/config/ghostty/config $HOME/.config/ghostty/config
 
 # Symlink Claude Code config
 mkdir -p $HOME/.claude
-ln -sf $HOME/.dotfiles/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
-ln -sf $HOME/.dotfiles/claude/settings.json $HOME/.claude/settings.json
-ln -sf $HOME/.dotfiles/claude/statusline.sh $HOME/.claude/statusline.sh
-ln -sf $HOME/.dotfiles/claude/laravel-php-guidelines.md $HOME/.claude/laravel-php-guidelines.md
-ln -sf $HOME/.dotfiles/claude/agents $HOME/.claude/agents
-ln -sf $HOME/.dotfiles/claude/skills $HOME/.claude/skills
+ln -sf $HOME/.dotfiles/config/claude/CLAUDE.md $HOME/.claude/CLAUDE.md
+ln -sf $HOME/.dotfiles/config/claude/settings.json $HOME/.claude/settings.json
+ln -sf $HOME/.dotfiles/config/claude/statusline.sh $HOME/.claude/statusline.sh
+ln -sf $HOME/.dotfiles/config/claude/laravel-php-guidelines.md $HOME/.claude/laravel-php-guidelines.md
+ln -sf $HOME/.dotfiles/config/claude/agents $HOME/.claude/agents
+ln -sf $HOME/.dotfiles/config/claude/skills $HOME/.claude/skills
 mkdir -p $HOME/.claude/hooks/peon-ping
-ln -sf $HOME/.dotfiles/claude/peon-ping-config.json $HOME/.claude/hooks/peon-ping/config.json
+ln -sf $HOME/.dotfiles/config/claude/peon-ping-config.json $HOME/.claude/hooks/peon-ping/config.json
 
 # Update Homebrew recipes
 brew update
 
 # Install all our dependencies with bundle (See Brewfile)
-brew bundle --file ./Brewfile
+brew bundle --file $HOME/.dotfiles/config/Brewfile
 
 # Set default MySQL root password and auth type
 mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
@@ -59,7 +60,7 @@ mkdir -p $HOME/Code
 mkdir -p $HOME/Herd
 
 # Symlink the Mackup config file to the home directory
-ln -s ./.mackup.cfg $HOME/.mackup.cfg
+ln -sf $HOME/.dotfiles/config/macos/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source ./.macos
+source $HOME/.dotfiles/config/macos/.macos
