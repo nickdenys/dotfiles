@@ -1,4 +1,4 @@
-# Nick's Dotfiles
+# Dotfiles
 
 This repository automates setting up and maintaining my Mac. One script handles everything: Homebrew packages, shell configuration, app preferences, macOS system defaults, and Claude Code setup.
 
