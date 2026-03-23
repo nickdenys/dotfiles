@@ -4,68 +4,76 @@ tap 'stripe/stripe-cli'
 # Binaries
 brew 'awscli'
 brew 'bash' # Latest Bash version
-brew 'bat' # Used for spatie/visit
+brew 'bat'
 brew 'coreutils' # Those that come with macOS are outdated
+brew 'eza'
 brew 'ffmpeg'
 brew 'gh'
 brew 'git'
+brew 'git-delta'
 brew 'grep'
 brew 'httpie'
-brew 'jq' # Used for spatie/visit
+brew 'jq'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
-brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'pkg-config'
 brew 'stripe/stripe-cli/stripe'
 brew 'stripe/stripe-mock/stripe-mock'
-brew 'svn' # Needed to install fonts
-
-# Spatie Medialibrary
+brew 'gifsicle'
+brew 'imagemagick'
 brew 'jpegoptim'
 brew 'optipng'
 brew 'pngquant'
 brew 'svgo'
-brew 'gifsicle'
+brew 'trash'
+brew 'zsh-autosuggestions'
 
-# Development
-brew 'imagemagick'
-brew 'yarn'
-
-# Apps
-cask '1password'
-cask 'discord'
-cask 'docker'
-cask 'docker-desktop'
-cask 'figma'
-cask 'firefox'
+# Development Apps
+cask 'claude'
+cask 'claude-code'
+cask 'codex'
+cask 'dbngin'
+cask 'ghostty'
 cask 'github'
-cask 'google-chrome'
 cask 'herd'
 cask 'imageoptim'
-cask 'slack'
+cask 'orbstack'
+cask 'ray'
 cask 'tableplus'
-cask 'transmit'
-cask 'visual-studio-code'
-cask 'zoom'
-cask 'rectangle'
-cask 'vanilla'
-cask 'rocket'
 cask 'tower'
-cask 'dbngin'
+cask 'tuple'
+cask 'visual-studio-code'
 
-# Quicklook
-cask 'qlmarkdown'
+# Browsers
+cask 'firefox'
+cask 'google-chrome'
+
+# Productivity
+cask '1password'
+cask 'figma'
+cask 'obsidian'
+cask 'raycast'
+cask 'rectangle'
+cask 'rocket'
+cask 'transmit'
+cask 'vanilla'
+
+# Communication
+cask 'discord'
+cask 'slack'
+cask 'zoom'
+
+# QuickLook plugins
+cask 'betterzip'
+cask 'suspicious-package'
 
 # Fonts
+cask 'font-cascadia-code'
+cask 'font-ibm-plex-mono'
 cask 'font-lato'
 cask 'font-open-sans'
 cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
+cask 'font-source-code-pro-for-powerline'
 cask 'font-source-sans-3'
 cask 'font-source-serif-4'
-cask 'font-cascadia-code'
-cask 'font-ibm-plex-mono'
-
-# Mac App Store
-mas 'Keynote', id: 409183694
-mas 'Numbers', id: 409203825

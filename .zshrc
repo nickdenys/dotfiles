@@ -106,6 +106,9 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Enable autosuggestions (installed via brew)
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Herd injected PHP 8.4 configuration.
